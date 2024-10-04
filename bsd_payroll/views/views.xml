@@ -1,0 +1,108 @@
+<odoo>
+  <data>
+
+    <record id="bsd_payroll_view_tree" model="ir.ui.view">
+      <field name="name">bsd_payroll.view.tree</field>
+      <field name="model">bsd.payroll</field>
+      <!-- <field name="model">bsd_payroll.bsd_payroll</field> -->
+      <field name="arch" type="xml">
+        <tree string="Insentif dan THR">
+          <field name="insentif" optional="show"/>
+        </tree>
+      </field>
+    </record>
+    
+    <record id="bsd_transport_view_tree" model="ir.ui.view">
+      <field name="name">bsd.transport.view.tree</field>
+      <field name="model">bsd.transport</field>
+      <field name="arch" type="xml">
+        <tree string="Jarak (Km) Transportasi">
+          <field name="tanggal" optional="show"/>
+          <field name="km_awal" optional="show"/>
+          <field name="km_akhir" optional="show"/>
+          <field name="jarak" optional="show"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="bsd_posting_view_tree" model="ir.ui.view">
+      <field name="name">bsd_posting.view.tree</field>
+      <field name="model">bsd.posting</field>
+      <field name="arch" type="xml">
+        <tree string="Posting Setoran">
+          <field name="nama" optional="show"/>
+          <field name="date_from" string="Date From" optional="show"/>
+          <field name="date_to" string="Date To" optional="show"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="bsd_payroll_view_form" model="ir.ui.view">
+      <field name="name">bsd.payroll.view.form</field>
+      <field name="model">bsd.payroll</field>
+      <!-- <field name="model">bsd_payroll.bsd_payroll</field> -->
+      <field name="arch" type="xml">
+        <form string="Form Insentif Tahunan dan THR">
+          <sheet>
+            <group col="4">
+              <field name="insentif"/>
+            </group>
+            <group>
+              
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="bsd_transport_view_form" model="ir.ui.view">
+      <field name="name">bsd.transport.view.form</field>
+      <field name="model">bsd.transport</field>
+      <field name="arch" type="xml">
+        <form string="Input Jarak (Km)">
+          <sheet>
+            <group col="4">
+              <field name="tanggal"/>
+              <field name="km_awal"/>
+              <field name="km_akhir"/>
+              <field name="jarak"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="bsd_posting_view_form" model="ir.ui.view">
+      <field name="name">bsd_posting.view.form</field>
+      <field name="model">bsd.posting</field>
+      <field name="arch" type="xml">
+        <form string="Posting Setoran">
+          <header>
+            <button string="Posting Gaji" name="action_schedule_posting" type="object" class="oe_highlight"/>
+            <button string="Posting Uang Makan" name="action_post_weekly" type="object" class="oe_highlight"/>
+            <button string="Posting Uang Transport" name="action_post_transport" type="object" class="oe_highlight"/>
+            <button string="Tab THT" name="action_schedule_tht" type="object" class="oe_highlight"/>
+            <button string="Tab Teller" name="action_schedule_teller" type="object" class="oe_highlight"/>
+            <button string="Angsuran" name="action_schedule_angsuran" type="object" class="oe_highlight"/>
+            <button string="Posting Insentif" name="action_post_insentif" type="object" class="oe_highlight"/>
+            <button string="Posting THR" name="action_post_thr" type="object" class="oe_highlight"/>
+            <button string="Posting Jurnal" name="action_schedule_nonkas" type="object" class="oe_highlight"/>
+            <button string="Download Report" name="action_download_report" type="object"/>
+          </header>
+          <sheet>
+            <group>
+                <field name="nama" placeholder="Transaksi Gaji.."/>
+                <label for="date_from" string="Periode"/>
+                <div class="col-4">
+                  <field name="date_from"/> - <field name="date_to"/>
+                </div>
+                <field name="posting_date" class="oe_inline"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+  </data>
+</odoo>
