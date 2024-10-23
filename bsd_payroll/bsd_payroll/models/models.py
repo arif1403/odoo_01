@@ -457,10 +457,8 @@ class BSDPosting(models.Model):
 
             return net_transport
 
-        # client_secret = "b23584024228150612849f806bfae35e1185bfe2"
-        # api = "https://apimbs.msodc.co.id/los/"
-        client_secret = "94d5025d57778ae87147f302627adbe5d2a49dec"
-        api = "https://testing.msodc.co.id/los/"
+        client_secret = "b23584024228150612849f806bfae35e1185bfe2"
+        api = "https://apimbs.msodc.co.id/los/"
         path = [
                 "api/auth",
                 "api/tabungan/info",
@@ -472,8 +470,7 @@ class BSDPosting(models.Model):
         endpoint = f'{api}{path[0]}'
         endpoint_setoran_coa = f'{api}{path[2]}'
         # Membuat string JSON untuk data permintaan
-        # auth = {"username": "sinthadaya_oddo", "password": "sinthadayaoddof@Gfk$7W"}
-        auth = {"username": "sinthadaya_oddo_test", "password": "sinthadayaoddotest3jW6R%Zm"}
+        auth = {"username": "sinthadaya_oddo", "password": "sinthadayaoddof@Gfk$7W"}
         json_data = json.dumps(auth)
 
         # Menghitung HMAC-SHA256 dari data JSON menggunakan client_secret
@@ -540,7 +537,7 @@ class BSDPosting(models.Model):
                 worksheet.write(row_counter, 3, response_json["amount"])
                 worksheet.write(row_counter, 4, response_json["rekening"]["norek"])
                 worksheet.write(row_counter, 5, response_json["rekening"]["name"])
-                worksheet.write(row_counter, 6, response_json["rek_sumber"]["norek"])
+                worksheet.write(row_counter, 6, response_json["sumber"]["norek"])
             workbook.close()
             print("Posting Selesai!")
 
