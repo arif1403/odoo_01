@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+bsd_payroll.access_bsd_payroll,access_bsd_payroll,bsd_payroll.model_bsd_payroll,base.group_user,1,1,1,1
+bsd_payroll.access_bsd_transport,access_bsd_transport,bsd_payroll.model_bsd_transport,base.group_user,1,1,1,1
+bsd_payroll.access_bsd_posting,access_bsd_posting,bsd_payroll.model_bsd_posting,base.group_user,1,1,1,1
