@@ -457,8 +457,9 @@ class BSDPosting(models.Model):
 
             return net_transport
 
-        client_secret = "b23584024228150612849f806bfae35e1185bfe2"
+        # client_secret = "b23584024228150612849f806bfae35e1185bfe2"
         # api = "https://apimbs.msodc.co.id/los/"
+        client_secret = "94d5025d57778ae87147f302627adbe5d2a49dec"
         api = "https://testing.msodc.co.id/los/"
         path = [
                 "api/auth",
