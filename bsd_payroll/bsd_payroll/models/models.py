@@ -211,7 +211,7 @@ class BSDPosting(models.Model):
                                 "Content-Type":"application/json",
                                 "Authorization":"Bearer " + bearer_token}
             response_2 = requests.post(endpoint_setoran_coa, data=json_data_, headers=headers_nasabah, timeout=35)
-            time.sleep(delay_seconds)
+            # time.sleep(delay_seconds)
             print(response_2.status_code)
             print("-------------------------------------------------------------")
             print(response_2.text)
@@ -365,7 +365,7 @@ class BSDPosting(models.Model):
                     "Authorization": "Bearer " + bearer_token
                 }
                 response_2 = requests.post(endpoint_setoran_coa, data=json_data_, headers=headers_nasabah, timeout=35)
-                time.sleep(delay_seconds)
+                # time.sleep(delay_seconds)
                 
                 print(response_2.status_code)
                 print("-------------------------------------------------------------")
@@ -524,7 +524,7 @@ class BSDPosting(models.Model):
                                 "Content-Type": "application/json",
                                 "Authorization": "Bearer " + bearer_token}
                 response_2 = requests.post(endpoint_setoran_coa, data=json_data_, headers=headers_nasabah, timeout=35)
-                time.sleep(delay_seconds)
+                # time.sleep(delay_seconds)
                 print(response_2.status_code)
                 print("-------------------------------------------------------------")
                 print(response_2.text)
@@ -680,7 +680,7 @@ class BSDPosting(models.Model):
                                 "Content-Type": "application/json",
                                 "Authorization": "Bearer " + bearer_token}
                 response_2 = requests.post(endpoint_setoran_coa, data=json_data_, headers=headers_nasabah, timeout=35)
-                time.sleep(delay_seconds)
+                # time.sleep(delay_seconds)
                 print(response_2.status_code)
                 print("-------------------------------------------------------------")
                 print(response_2.text)
@@ -834,7 +834,7 @@ class BSDPosting(models.Model):
                                 "Content-Type": "application/json",
                                 "Authorization": "Bearer " + bearer_token}
                 response_2 = requests.post(endpoint_setoran_coa, data=json_data_, headers=headers_nasabah, timeout=35)
-                time.sleep(delay_seconds)
+                # time.sleep(delay_seconds)
                 print(response_2.status_code)
                 print("-------------------------------------------------------------")
                 print(response_2.text)
@@ -988,7 +988,7 @@ class BSDPosting(models.Model):
                             "Content-Type": "application/json",
                             "Authorization": "Bearer " + bearer_token}
             response_2 = requests.post(endpoint_setoran_coa, data=json_data_, headers=headers_nasabah, timeout=35)
-            time.sleep(delay_seconds)
+            # time.sleep(delay_seconds)
             print(response_2.status_code)
             print("-------------------------------------------------------------")
             print(response_2.text)
@@ -1125,7 +1125,7 @@ class BSDPosting(models.Model):
                 "Authorization": "Bearer " + bearer_token
             }
             response_2 = requests.post(endpoint_setoran_coa, data=json_data_, headers=headers_nasabah, timeout=25)
-            time.sleep(delay_seconds)
+            # time.sleep(delay_seconds)
             
             print(response_2.status_code)
             print("-------------------------------------------------------------")
@@ -1319,7 +1319,7 @@ class BSDPosting(models.Model):
                 "Authorization": "Bearer " + bearer_token
             }
             response_2 = requests.post(endpoint_angsuran, data=json_data_, headers=headers_nasabah, timeout=35)
-            time.sleep(delay_seconds)
+            # time.sleep(delay_seconds)
             print(response_2.status_code)
             print("-------------------------------------------------------------")
             print(response_2.text)
@@ -1574,7 +1574,7 @@ class BSDPosting(models.Model):
             }
 
             response = requests.post(endpoint_akuntansi_nonkas, data=json_data, headers=headers)
-            time.sleep(delay_seconds)
+            # time.sleep(delay_seconds)
             print(response.status_code)
             print(response.text)
             response_json = json.loads(response.text)
